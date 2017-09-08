@@ -1,0 +1,15 @@
+<div *ngIf="session">
+  <h2>{{session.name}} details!</h2>
+  <div>
+    <label>id: </label>{{session.id}}</div>
+  <div class="col-md-3">
+    <label>name: </label>
+    <input [(ngModel)]="session.name" placeholder="name" />
+  </div>
+  <div>
+    <label>Description: </label>
+    <input [(ngModel)]="session.desc" placeholder="Description"/>
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

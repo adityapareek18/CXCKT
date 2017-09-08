@@ -1,0 +1,10 @@
+<h3>Upcoming Sessions</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let session of sessions"  [routerLink]="['/detail', session.id]"  class="col-1-4">
+    <div class="module session">
+      <h4>{{session.name}}</h4>
+      <h6>{{session.desc}}</h6>
+    </div>
+  </a>
+</div>
+<session-search></session-search>
