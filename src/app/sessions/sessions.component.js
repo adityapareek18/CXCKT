@@ -29,7 +29,7 @@ var SessionsComponent = (function () {
         if (!name) {
             return;
         }
-        this.sessionService.create(name)
+        this.sessionService.create(name, "")
             .then(function (session) {
             _this.sessions.push(session);
             _this.selectedSession = null;

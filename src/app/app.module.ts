@@ -16,6 +16,10 @@ import { SessionDetailComponent }  from './session-detail/session-detail.compone
 import { SessionService }          from './services/session.service';
 import { SessionSearchComponent }  from './session-search/session-search.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CreateSessionComponent } from './create-session/create-session.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -23,7 +27,13 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MdFormFieldModule,
+    MdInputModule,
+    MdDialogModule,
+    MdButtonModule
   ],
   declarations: [
     AppComponent,
@@ -31,7 +41,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SessionDetailComponent,
     SessionsComponent,
     SessionSearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    CreateSessionComponent   
   ],
   providers: [ SessionService ],
   bootstrap: [ AppComponent ]

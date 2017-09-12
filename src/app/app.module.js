@@ -21,6 +21,10 @@ var session_detail_component_1 = require("./session-detail/session-detail.compon
 var session_service_1 = require("./services/session.service");
 var session_search_component_1 = require("./session-search/session-search.component");
 var navbar_component_1 = require("./navbar/navbar.component");
+var create_session_component_1 = require("./create-session/create-session.component");
+var animations_1 = require("@angular/platform-browser/animations");
+var animations_2 = require("@angular/platform-browser/animations");
+var material_1 = require("@angular/material");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -33,7 +37,13 @@ AppModule = __decorate([
             forms_1.FormsModule,
             http_1.HttpModule,
             angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
-            app_routing_module_1.AppRoutingModule
+            app_routing_module_1.AppRoutingModule,
+            animations_1.BrowserAnimationsModule,
+            animations_2.NoopAnimationsModule,
+            material_1.MdFormFieldModule,
+            material_1.MdInputModule,
+            material_1.MdDialogModule,
+            material_1.MdButtonModule
         ],
         declarations: [
             app_component_1.AppComponent,
@@ -41,7 +51,8 @@ AppModule = __decorate([
             session_detail_component_1.SessionDetailComponent,
             sessions_component_1.SessionsComponent,
             session_search_component_1.SessionSearchComponent,
-            navbar_component_1.NavbarComponent
+            navbar_component_1.NavbarComponent,
+            create_session_component_1.CreateSessionComponent
         ],
         providers: [session_service_1.SessionService],
         bootstrap: [app_component_1.AppComponent]

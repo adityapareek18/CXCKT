@@ -1,0 +1,11 @@
+<form>
+    <md-form-field>
+      <input mdInput #sessionName placeholder="Name Of Session">
+    </md-form-field>
+
+    <md-form-field>
+      <input mdInput #sessionDesc placeholder="Description">
+    </md-form-field>
+
+    <button md-button (click)="add(sessionName.value, sessionDesc.value); sessionName.value=''; sessionDesc.value='';">Add</button>
+</form>

@@ -11,11 +11,13 @@ var router_1 = require("@angular/router");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var sessions_component_1 = require("./sessions/sessions.component");
 var session_detail_component_1 = require("./session-detail/session-detail.component");
+var create_session_component_1 = require("./create-session/create-session.component");
 var routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'detail/:id', component: session_detail_component_1.SessionDetailComponent },
-    { path: 'sessions', component: sessions_component_1.SessionsComponent }
+    { path: 'sessions', component: sessions_component_1.SessionsComponent },
+    { path: 'create-sessions', component: create_session_component_1.CreateSessionComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

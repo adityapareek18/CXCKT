@@ -37,9 +37,9 @@ export class SessionService {
       .catch(this.handleError);
   }
 
-  create(name: string): Promise<Session> {
+  create(name: string, desc:string): Promise<Session> {
     return this.http
-      .post(this.sessionsUrl, JSON.stringify({name: name}), {headers: this.headers})
+      .post(this.sessionsUrl, JSON.stringify({name: name, desc: desc}), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as Session)
       .catch(this.handleError);

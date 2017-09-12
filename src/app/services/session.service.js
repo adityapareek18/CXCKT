@@ -38,9 +38,9 @@ var SessionService = (function () {
             .then(function () { return null; })
             .catch(this.handleError);
     };
-    SessionService.prototype.create = function (name) {
+    SessionService.prototype.create = function (name, desc) {
         return this.http
-            .post(this.sessionsUrl, JSON.stringify({ name: name }), { headers: this.headers })
+            .post(this.sessionsUrl, JSON.stringify({ name: name, desc: desc }), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);

@@ -26,7 +26,7 @@ export class SessionsComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.sessionService.create(name)
+    this.sessionService.create(name,"")
       .then(session => {
         this.sessions.push(session);
         this.selectedSession = null;
