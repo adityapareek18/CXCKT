@@ -10,7 +10,11 @@ import { SessionService } from '../services/session.service';
 
 export class CreateSessionComponent {
     session: Session = new Session();
-    
+    foods = [
+      {value: 'steak-0', viewValue: 'Steak'},
+      {value: 'pizza-1', viewValue: 'Pizza'},
+      {value: 'tacos-2', viewValue: 'Tacos'}
+    ];
       constructor(
         private sessionService: SessionService,
         private router: Router) { }

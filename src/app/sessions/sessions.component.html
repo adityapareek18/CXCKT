@@ -1,10 +1,4 @@
 <h2>My Sessions</h2>
-<div>
-  <label>Session name:</label> <input #sessionName />
-  <button (click)="add(sessionName.value); sessionName.value=''">
-    Add
-  </button>
-</div>
 <ul class="sessions">
   <li *ngFor="let session of sessions" (click)="onSelect(session)"
       [class.selected]="session === selectedSession">

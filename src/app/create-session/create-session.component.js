@@ -18,6 +18,11 @@ var CreateSessionComponent = (function () {
         this.sessionService = sessionService;
         this.router = router;
         this.session = new Session_1.Session();
+        this.foods = [
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' }
+        ];
     }
     CreateSessionComponent.prototype.saveSession = function () {
         this.add(this.session.name, this.session.desc, this.session.ddate);

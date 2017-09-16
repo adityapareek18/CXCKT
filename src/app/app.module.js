@@ -45,7 +45,8 @@ AppModule = __decorate([
             material_1.MdDialogModule,
             material_1.MdButtonModule,
             material_1.MdDatepickerModule,
-            material_1.MdNativeDateModule
+            material_1.MdNativeDateModule,
+            material_1.MdIconModule
         ],
         declarations: [
             app_component_1.AppComponent,
@@ -54,9 +55,15 @@ AppModule = __decorate([
             sessions_component_1.SessionsComponent,
             session_search_component_1.SessionSearchComponent,
             navbar_component_1.NavbarComponent,
-            create_session_component_1.CreateSessionComponent
+            create_session_component_1.CreateSessionComponent,
+            material_1.MdExpansionPanel,
+            material_1.MdExpansionPanelTitle,
+            material_1.MdExpansionPanelDescription,
+            material_1.MdExpansionPanelHeader,
+            material_1.MdSelect,
+            material_1.MdOption
         ],
-        providers: [session_service_1.SessionService],
+        providers: [session_service_1.SessionService, material_1.UniqueSelectionDispatcher, material_1.MdIconRegistry],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

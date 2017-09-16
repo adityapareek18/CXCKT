@@ -19,7 +19,25 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CreateSessionComponent } from './create-session/create-session.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule, MdDatepickerModule, MdNativeDateModule } from '@angular/material';
+import { 
+  MdFormFieldModule, 
+  MdInputModule, 
+  MdDialogModule, 
+  MdButtonModule, 
+  MdDatepickerModule, 
+  MdNativeDateModule,
+  MdExpansionPanel,
+  MdExpansionPanelTitle,
+  MdExpansionPanelDescription,
+  MdExpansionPanelHeader,
+  UniqueSelectionDispatcher,
+  MdIcon,
+  MdIconBase,
+  MdIconModule,
+  MdIconRegistry,
+  MdSelect,
+  MdOption,
+ } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -35,7 +53,8 @@ import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule, MdDat
     MdDialogModule,
     MdButtonModule,
     MdDatepickerModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    MdIconModule
   ],
   declarations: [
     AppComponent,
@@ -44,9 +63,15 @@ import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule, MdDat
     SessionsComponent,
     SessionSearchComponent,
     NavbarComponent,
-    CreateSessionComponent   
+    CreateSessionComponent,
+    MdExpansionPanel,
+    MdExpansionPanelTitle,
+    MdExpansionPanelDescription,
+    MdExpansionPanelHeader,
+    MdSelect,
+    MdOption
   ],
-  providers: [ SessionService ],
+  providers: [ SessionService, UniqueSelectionDispatcher, MdIconRegistry],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
