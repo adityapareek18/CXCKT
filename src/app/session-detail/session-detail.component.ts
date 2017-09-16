@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/switchMap';
 import { Component, OnInit }        from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Location }                 from '@angular/common';
+import { Location, DatePipe }       from '@angular/common';
 
 import { Session }        from '../Session';
 import { SessionService } from '../services/session.service';

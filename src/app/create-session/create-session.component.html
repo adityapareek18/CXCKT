@@ -1,11 +1,18 @@
 <form>
     <md-form-field>
-      <input mdInput #sessionName placeholder="Name Of Session">
+      <input mdInput [(ngModel)]="session.name" #sessionName placeholder="Name Of Session" [ngModelOptions]="{standalone: true}">
     </md-form-field>
 
     <md-form-field>
-      <input mdInput #sessionDesc placeholder="Description">
+      <input mdInput [(ngModel)]="session.desc" #sessionDesc placeholder="Description" [ngModelOptions]="{standalone: true}">
     </md-form-field>
 
-    <button md-button (click)="add(sessionName.value, sessionDesc.value); sessionName.value=''; sessionDesc.value='';">Add</button>
-</form>
+    <md-form-field>
+      <input mdInput [mdDatepicker]="picker" [(ngModel)]="session.ddate" placeholder="Choose a date" [ngModelOptions]="{standalone: true}">
+      <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+      <md-datepicker #picker></md-datepicker>
+    </md-form-field>
+
+    <button md-raised-button color="primary" 
+    (click)="saveSession();">Add</button>    
+  </form>

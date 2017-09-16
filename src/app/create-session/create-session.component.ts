@@ -9,19 +9,23 @@ import { SessionService } from '../services/session.service';
 })
 
 export class CreateSessionComponent {
-    selectedSession: Session;
+    session: Session = new Session();
     
       constructor(
         private sessionService: SessionService,
         private router: Router) { }
-    
-      add(name: string, desc: string): void {
+
+    saveSession(): void
+    {
+      this.add(this.session.name, this.session.desc, this.session.ddate);
+    }
+      add(name: string, desc: string, ddate: Date): void {
         name = name.trim();
         desc = desc.trim();
         if (!name || !desc) { return; }
-        this.sessionService.create(name, desc)
+        this.sessionService.create(name, desc, ddate)
           .then(session => {
-            this.selectedSession = null;
+            this.session = new Session();
           });
       }
 }

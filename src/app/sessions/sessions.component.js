@@ -23,13 +23,13 @@ var SessionsComponent = (function () {
             .getSessions()
             .then(function (sessions) { return _this.sessions = sessions; });
     };
-    SessionsComponent.prototype.add = function (name) {
+    SessionsComponent.prototype.add = function (name, desc, date) {
         var _this = this;
         name = name.trim();
         if (!name) {
             return;
         }
-        this.sessionService.create(name, "")
+        this.sessionService.create(name, desc, date)
             .then(function (session) {
             _this.sessions.push(session);
             _this.selectedSession = null;

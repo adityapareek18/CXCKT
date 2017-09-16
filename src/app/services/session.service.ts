@@ -20,7 +20,6 @@ export class SessionService {
                .catch(this.handleError);
   }
 
-
   getSession(id: number): Promise<Session> {
     const url = `${this.sessionsUrl}/${id}`;
     return this.http.get(url)
@@ -37,9 +36,9 @@ export class SessionService {
       .catch(this.handleError);
   }
 
-  create(name: string, desc:string): Promise<Session> {
+  create(name: string, desc:string, ddate: Date): Promise<Session> {
     return this.http
-      .post(this.sessionsUrl, JSON.stringify({name: name, desc: desc}), {headers: this.headers})
+      .post(this.sessionsUrl, JSON.stringify({name: name, desc: desc, ddate: ddate}), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as Session)
       .catch(this.handleError);

@@ -23,10 +23,10 @@ export class SessionsComponent implements OnInit {
         .then(sessions => this.sessions = sessions);
   }
 
-  add(name: string): void {
+  add(name: string, desc:string, date:Date): void {
     name = name.trim();
     if (!name) { return; }
-    this.sessionService.create(name,"")
+    this.sessionService.create(name,desc, date)
       .then(session => {
         this.sessions.push(session);
         this.selectedSession = null;

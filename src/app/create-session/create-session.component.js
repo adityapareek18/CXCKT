@@ -11,22 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var Session_1 = require("../Session");
 var session_service_1 = require("../services/session.service");
 var CreateSessionComponent = (function () {
     function CreateSessionComponent(sessionService, router) {
         this.sessionService = sessionService;
         this.router = router;
+        this.session = new Session_1.Session();
     }
-    CreateSessionComponent.prototype.add = function (name, desc) {
+    CreateSessionComponent.prototype.saveSession = function () {
+        this.add(this.session.name, this.session.desc, this.session.ddate);
+    };
+    CreateSessionComponent.prototype.add = function (name, desc, ddate) {
         var _this = this;
         name = name.trim();
         desc = desc.trim();
         if (!name || !desc) {
             return;
         }
-        this.sessionService.create(name, desc)
+        this.sessionService.create(name, desc, ddate)
             .then(function (session) {
-            _this.selectedSession = null;
+            _this.session = new Session_1.Session();
         });
     };
     return CreateSessionComponent;

@@ -19,7 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CreateSessionComponent } from './create-session/create-session.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule } from '@angular/material';
+import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule, MdDatepickerModule, MdNativeDateModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -33,7 +33,9 @@ import { MdFormFieldModule, MdInputModule, MdDialogModule, MdButtonModule } from
     MdFormFieldModule,
     MdInputModule,
     MdDialogModule,
-    MdButtonModule
+    MdButtonModule,
+    MdDatepickerModule,
+    MdNativeDateModule
   ],
   declarations: [
     AppComponent,

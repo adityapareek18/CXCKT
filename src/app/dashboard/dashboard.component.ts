@@ -15,6 +15,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.sessionService.getSessions()
-      .then(sessions => this.sessions = sessions.slice(1, 5));
+      .then(sessions => this.sessions = sessions.slice(1,5));
   }
 }

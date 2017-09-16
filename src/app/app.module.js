@@ -43,7 +43,9 @@ AppModule = __decorate([
             material_1.MdFormFieldModule,
             material_1.MdInputModule,
             material_1.MdDialogModule,
-            material_1.MdButtonModule
+            material_1.MdButtonModule,
+            material_1.MdDatepickerModule,
+            material_1.MdNativeDateModule
         ],
         declarations: [
             app_component_1.AppComponent,
