@@ -1,0 +1,10 @@
+<div id="search-component">
+  <h4>Session Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <div>
+    <div *ngFor="let session of sessions | async"
+         (click)="gotoDetail(session)" class="search-result" >
+      {{session.name}}
+    </div>
+  </div>
+</div>

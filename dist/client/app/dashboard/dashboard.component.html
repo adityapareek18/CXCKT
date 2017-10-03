@@ -1,0 +1,29 @@
+<h3>Upcoming Sessions</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let session of sessions"  [routerLink]="['/detail', session.id]"  class="col-1-4">
+    <div class="module session">
+      <h4>{{session.name}}</h4>
+      <h6>{{session.desc}}</h6>
+      <h6>{{session.ddate | date:'fullDate'}}</h6>
+    </div>
+  </a>  
+</div>
+<!--<md-expansion-panel class="module session">
+  <md-expansion-panel-header>
+    <md-panel-title>
+      Personal data
+    </md-panel-title>
+    <md-panel-description>
+      Type your name and age
+    </md-panel-description>
+  </md-expansion-panel-header>
+  
+  <md-form-field>
+    <input mdInput placeholder="First name">
+  </md-form-field>
+  
+  <md-form-field>
+    <input mdInput placeholder="Age">
+  </md-form-field>
+</md-expansion-panel>-->
+<session-search></session-search>

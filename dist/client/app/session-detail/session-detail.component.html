@@ -1,0 +1,25 @@
+<div *ngIf="session">
+  <h2>{{session.name}} details!</h2>
+  <div>
+    <md-form-field>
+    <input mdInput [(ngModel)]="session.id" placeholder="ID" [ngModelOptions]="{standalone: true}" disabled>
+    </md-form-field>
+  </div>
+  <div>
+    <md-form-field>
+      <input mdInput [(ngModel)]="session.name" placeholder="Name" [ngModelOptions]="{standalone: true}">
+    </md-form-field>
+  </div>
+  <div>
+    <md-form-field>
+      <input mdInput [ngModel]="session.desc" placeholder="Description" [ngModelOptions]="{standalone: true}">
+    </md-form-field>
+  </div>
+  <div>
+    <md-form-field>
+      <input mdInput [ngModel]="session.ddate | date:'fullDate'" placeholder="Date">
+    </md-form-field>
+  </div>
+  <button md-raised-button color="primary" (click)="goBack()">Back</button>
+  <button md-raised-button color="primary" (click)="save()">Save</button>
+</div>

@@ -1,0 +1,16 @@
+<h2>My Sessions</h2>
+<ul class="sessions">
+  <li *ngFor="let session of sessions" (click)="onSelect(session)"
+      [class.selected]="session === selectedSession">
+    <span class="badge">{{session.id}}</span>
+    <span>{{session.name}}</span>
+    <button class="delete"
+      (click)="delete(session); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedSession">
+  <h2>
+    {{selectedSession.name | uppercase}} is my session
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

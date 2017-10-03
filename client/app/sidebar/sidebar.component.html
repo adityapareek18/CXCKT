@@ -1,0 +1,16 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2">
+
+<md-toolbar>
+    <h1>Sessions</h1>
+</md-toolbar>
+
+<md-content class="scrollable-nav-content">
+    <md-list>
+            <md-list-itemi *ngFor="let session of sessions" (click)="onSelect(session)">
+                <span class="badge">{{session.id}}</span>
+                <span>{{session.name}}</span>
+            </md-list-item>
+        </md-list>
+</md-content>
+
+</md-sidenav>
